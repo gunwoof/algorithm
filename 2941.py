@@ -23,3 +23,4 @@ alpha = input()
 for t in a: 
     alpha = alpha.replace(t, '*')
 print(len(alpha))
+
