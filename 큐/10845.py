@@ -17,8 +17,8 @@ def pop():
     
 def size():
     global que,start,end
-    return len(que[start+1:end+1])
-
+    return end-start
+    
 def empty():
     global que,start,end
     if start==end:
