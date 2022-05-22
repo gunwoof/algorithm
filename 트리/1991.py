@@ -37,7 +37,7 @@ tree={}
 # 트리 완성(딕셔너리 사용)
 for i in range(N):
     data, left, right=s.readline().split()
-    tree[data]=node(data,left,right)
+    tree[data]=node(data,left,right) # node의 주소값 저장
 
 pre_order(tree['A'])
 print()
