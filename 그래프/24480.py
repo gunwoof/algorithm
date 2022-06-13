@@ -17,8 +17,7 @@ for i in range(N+1):
     graph[i].sort() 
 
 stack.append(R)
-'''visited[R]=visited_cnt
-visited_cnt +=1'''
+
 
 while stack:
     compare_node=stack.pop()
