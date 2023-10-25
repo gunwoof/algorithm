@@ -1,48 +1,43 @@
 from sys import stdin as s
 from collections import deque as d
 
-def dfs(graph,N,V):
-    visited=[0]*(N+1) # 노드 1번부터 시작
+def dfs(graph,V):
     answer=[] # 출력 리스트
     
 
     stack=[]
     stack.append(V)
     answer=[V]
-    visited[V]=1
+    
     
 
     while stack:
         front_noed=stack.pop()
-        if visited[front_noed] == 0:
-            visited[front_noed] = 1
+        if front_noed not in answer :
             answer.append(front_noed)
 
         for i in graph[front_noed]:
-            if visited[i] == 0:
+            if i not in answer:
                 stack.append(i)
 
     return answer
     
-def bfs(graph,N,V):
-    visited=[0]*(N+1) # 노드 1번부터 시작
+def bfs(graph,V):
     answer=[] # 출력 리스트
     
 
     que=d()
     que.append(V)
     answer=[V]
-    visited[V]=1
+    
 
     while que:
         front_noed=que.popleft()
-        if visited[front_noed] == 0:
-            
-            visited[front_noed] = 1
+        if front_noed not in answer:
             answer.append(front_noed)
 
         for i in graph[front_noed]:
-            if visited[i] == 0:
+            if i not in answer:
                 que.append(i)
 
     return answer
